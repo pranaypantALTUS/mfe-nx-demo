@@ -5,6 +5,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "nx run-many -t build",
+    "build-fresh": "nx run-many -t build --skip-nx-cache",
     "start": "nx serve apps/dashboard --open",
     "storybook": "nx storybook storybook-host"
   },
