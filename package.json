@@ -4,8 +4,7 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "nx run-many -t build",
-    "build-fresh": "nx run-many -t build --skip-nx-cache",
+    "build": "nx run-many -t build --no-cloud",
     "start": "nx serve apps/dashboard --open",
     "storybook": "nx storybook storybook-host"
   },

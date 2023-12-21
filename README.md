@@ -11,6 +11,7 @@
 ## Add a new remote mfe
 
 Run below command to add a new remote
+
 ```
 nx g @nx/react:remote apps/<new_remote_app> --host="apps/dashboard"
 ```
@@ -18,8 +19,21 @@ nx g @nx/react:remote apps/<new_remote_app> --host="apps/dashboard"
 ## Start application
 
 Add any remotes that you want to be started alongside `dashboard` host
+
 ```
 pnpm start --devRemotes="dashboard"
+```
+
+## Running only affected targets
+
+We can use the `affected` command to build only the [changed target and its dependencies](https://nx.dev/ci/features/affected).
+
+```
+PS C:\Users\34755\Projects\react-mfe-nx-demo> pnpm nx affected:build --base=main
+
+    √  nx run libs/shared:build:production  [existing outputs match the cache, left as is]
+    √  nx run apps/contact:build:production  [existing outputs match the cache, left as is]
+    √  nx run apps/dashboard:build:production (15s)
 ```
 
 ## Running tasks
